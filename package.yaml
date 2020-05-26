@@ -1,0 +1,13 @@
+name: sensor.vzug
+description: V-ZUG custom component for Home Assistant
+type: component
+keywords:
+  - sensor
+  - vzug
+author:
+  name: Moritz Bützer
+  email: moritz@buetzer.bz
+license: MIT
+files:
+  - custom_components/vzug/sensor.py
+  - custom_components/vzug/manifest.json
