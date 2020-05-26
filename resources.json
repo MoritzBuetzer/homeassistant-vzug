@@ -1,0 +1,5 @@
+[
+  "https://raw.githubusercontent.com/MoritzBuetzer/vzug/master/custom_components/vzug/__init__.py",
+  "https://raw.githubusercontent.com/MoritzBuetzer/vzug/master/custom_components/vzug/manifest.json",
+  "https://raw.githubusercontent.com/MoritzBuetzer/vzug/master/custom_components/vzug/sensor.py"
+]

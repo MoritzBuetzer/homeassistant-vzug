@@ -1,0 +1,9 @@
+{
+  "domain": "vzug",
+  "name": "V-ZUG Home",
+  "documentation": "https://github.com/MoritzBuetzer/homeassistant-vzug",
+  "dependencies": [],
+  "render_readme": false,
+  "codeowners": ["@MoritzBuetzer"],
+  "requirements": ["python-vzug==0.1.1"]
+}
