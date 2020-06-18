@@ -5,6 +5,7 @@ import asyncio
 import logging
 
 import homeassistant.helpers.config_validation as cv
+from homeassistant.components.sensor import PLATFORM_SCHEMA
 import voluptuous as vol
 
 from vzug.vzug import VZUG
