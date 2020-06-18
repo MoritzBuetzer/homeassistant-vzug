@@ -8,11 +8,17 @@ import homeassistant.helpers.config_validation as cv
 from homeassistant.components.sensor import PLATFORM_SCHEMA
 import voluptuous as vol
 
+from homeassistant.const import (
+    CONF_PASSWORD,
+    CONF_USERNAME,
+    CONF_IP_ADDRESS
+)
+
+DOMAIN = "vzug"
+
 from vzug.vzug import VZUG
 
 _LOGGER = logging.getLogger(__name__)
-
-DOMAIN = "vzug"
 
 # Validation of the user's configuration
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
@@ -21,12 +27,8 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
     vol.Required(CONF_PASSWORD): cv.string,
 })
 
-IP_ADDRESS = "YOUR_IP"
-USERNAME = "YOUR_USERNAME"
-PASSWORD = "YOUR_PASSWORD"
-
 async def async_setup(hass, config):
-    hass.states.set('vzug.Hello_World', 'Works also!')
+    hass.states.set('vzug.initializes', True)
 
     ip_address = config[CONF_IP_ADDRESS]
     username = config[CONF_USERNAME]
