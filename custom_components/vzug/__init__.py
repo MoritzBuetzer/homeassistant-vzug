@@ -24,7 +24,7 @@ IP_ADDRESS = "YOUR_IP"
 USERNAME = "YOUR_USERNAME"
 PASSWORD = "YOUR_PASSWORD"
 
-def setup(hass, config):
+async def async_setup(hass, config):
     hass.states.set('vzug.Hello_World', 'Works also!')
 
     ip_address = config[CONF_IP_ADDRESS]
