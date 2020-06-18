@@ -9,7 +9,7 @@ import voluptuous as vol
 
 from vzug.vzug import VZUG
 
-_LOGGER = logging.getLogger(__name__
+_LOGGER = logging.getLogger(__name__)
 
 DOMAIN = "vzug"
 
