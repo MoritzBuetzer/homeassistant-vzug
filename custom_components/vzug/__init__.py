@@ -15,6 +15,7 @@ from homeassistant.const import (
 )
 
 DOMAIN = "vzug"
+COMPONENT_DOMAIN = "vzug"
 
 from vzug.vzug import VZUG
 
@@ -22,9 +23,11 @@ _LOGGER = logging.getLogger(__name__)
 
 # Validation of the user's configuration
 CONFIG_SCHEMA = vol.Schema({
-    vol.Required(CONF_HOST): cv.string,
-    vol.Required(CONF_USERNAME): cv.string,
-    vol.Required(CONF_PASSWORD): cv.string,
+    COMPONENT_DOMAIN: vol.Schema({
+        vol.Required(CONF_HOST): cv.string,
+        vol.Required(CONF_USERNAME): cv.string,
+        vol.Required(CONF_PASSWORD): cv.string
+    })
 })
 
 async def async_setup(hass, config):
