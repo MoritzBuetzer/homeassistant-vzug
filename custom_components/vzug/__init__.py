@@ -22,22 +22,26 @@ from vzug.vzug import VZUG
 _LOGGER = logging.getLogger(__name__)
 
 # Validation of the user's configuration
-CONFIG_SCHEMA = vol.Schema({
-    COMPONENT_DOMAIN: vol.Schema({
-        vol.Required(CONF_HOST): cv.string,
-        vol.Required(CONF_USERNAME): cv.string,
-        vol.Required(CONF_PASSWORD): cv.string
-    })
-})
+# CONFIG_SCHEMA = vol.Schema({
+#     COMPONENT_DOMAIN: vol.Schema({
+#         vol.Required(CONF_HOST): cv.string,
+#         vol.Required(CONF_USERNAME): cv.string,
+#         vol.Required(CONF_PASSWORD): cv.string
+#     })
+# })
 
 async def async_setup(hass, config):
     hass.states.set('vzug.initializes', True)
 
-    host = config[CONF_HOST]
-    username = config[CONF_USERNAME]
-    password = config[CONF_PASSWORD]
+    # host = config[CONF_HOST]
+    # username = config[CONF_USERNAME]
+    # password = config[CONF_PASSWORD]
 
-    _LOGGER.debug("conf %s", config)
+    host = "192.168.1.60"
+    username = "danmor"
+    password = "Ild260306"
+
+    _LOGGER.debug("in async_setup")
 
     async with VZUG(host, username, password) as vzug:
         # Collect the data of the current state
